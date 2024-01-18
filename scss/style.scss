@@ -58,12 +58,12 @@ header{
     text-align: center;
     padding: 26px;
     
-    & p{
+    p{
         font-weight: 300;
         font-size: 18px;
     }
 
-    & button{
+    button{
         border: none; 
         width: 218px;
         height: 50px; 
@@ -199,6 +199,7 @@ header{
                 }
                 &__like{
                     padding: 12px;
+                    font-size: 22px;
                 }
             }
         }
@@ -215,8 +216,11 @@ footer{
     flex-direction: column;
     gap: 16px;
     .footer__logo{
-        font-family: 'Shrikhand', serif;
-        font-size: 18px;
+        svg{
+            fill: white;
+            height: 27px;
+            width: 138px;
+        }
     }
     .footer__box{
         display:flex;

@@ -185,6 +185,7 @@ header .header__location {
 }
 .restaurants__container__card__content__like {
   padding: 12px;
+  font-size: 22px;
 }
 
 /******Footer******/
@@ -196,9 +197,10 @@ footer {
   flex-direction: column;
   gap: 16px;
 }
-footer .footer__logo {
-  font-family: "Shrikhand", serif;
-  font-size: 18px;
+footer .footer__logo svg {
+  fill: white;
+  height: 27px;
+  width: 138px;
 }
 footer .footer__box {
   display: flex;
