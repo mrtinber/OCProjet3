@@ -247,19 +247,34 @@ header .header__location {
   z-index: 2;
   border: none;
   background: white;
+  position: relative;
+}
+.restaurants__container__card__content__like input {
+  display: none;
+}
+.restaurants__container__card__content__like input:checked + label .fa-regular {
+  display: none;
+}
+.restaurants__container__card__content__like input:checked + label .fa-solid {
+  opacity: 1;
+}
+.restaurants__container__card__content__like .fa-regular {
+  position: absolute;
+  left: -50%;
+  padding: 1px;
 }
 .restaurants__container__card__content__like .fa-solid {
-  display: none;
   background: linear-gradient(#9356DC, #ff79da);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-.restaurants__container__card__content__like:active .fa-solid {
-  display: flex;
-}
-.restaurants__container__card__content__like:active .fa-regular {
-  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: -50%;
+  z-index: 1500;
+  opacity: 0;
+  transition: opacity 500ms;
+  padding: 1px;
 }
 
 /******Footer******/
