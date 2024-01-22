@@ -9,6 +9,63 @@ body {
 }
 
 /**Colors*/
+body {
+  background: linear-gradient(#ff79da 5%, #9356DC 30%);
+  position: relative;
+}
+
+/******Loading screen******/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(0.5);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+    animation-timing-function: cubic-bezier(1, -0.03, 0.8, 1.05);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.5);
+    animation-timing-function: cubic-bezier(1, -0.03, 0.8, 1.05);
+  }
+}
+@keyframes shake {
+  25% {
+    transform: translateX(5%);
+  }
+  75% {
+    transform: translateX(-5%);
+  }
+}
+.loader {
+  color: white;
+  text-shadow: 5px 5px #38c4a1;
+  font-size: 3rem;
+  font-family: "shrikhand";
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 1800ms ease-in-out infinite;
+  /**shake 800ms cubic-bezier(.4,.1,.6,.9) infinite*/
+}
+
+@keyframes content-display {
+  0% {
+    transform: translateX(-9999px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.content {
+  animation: content-display 0ms 450ms both;
+  z-index: 1000;
+  background: white;
+  background-size: cover;
+}
+
 /******Header******/
 header {
   width: 100%;
@@ -127,6 +184,7 @@ header .header__location {
 .restaurants__container a {
   display: flex;
   text-decoration: none;
+  z-index: 1;
 }
 .restaurants__container__card {
   display: flex;
@@ -186,6 +244,22 @@ header .header__location {
 .restaurants__container__card__content__like {
   padding: 12px;
   font-size: 22px;
+  z-index: 2;
+  border: none;
+  background: white;
+}
+.restaurants__container__card__content__like .fa-solid {
+  display: none;
+  background: linear-gradient(#9356DC, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.restaurants__container__card__content__like:active .fa-solid {
+  display: flex;
+}
+.restaurants__container__card__content__like:active .fa-regular {
+  display: none;
 }
 
 /******Footer******/
