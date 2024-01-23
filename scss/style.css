@@ -60,7 +60,7 @@ body {
   }
 }
 .content {
-  animation: content-display 0ms 450ms both;
+  animation: content-display 0ms 315ms both;
   z-index: 1000;
   background: white;
   background-size: cover;
@@ -301,6 +301,10 @@ footer .footer__box ul {
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+footer .footer__box ul a {
+  text-decoration: none;
+  color: inherit;
 }
 footer .footer__box__fat {
   font-weight: 500;

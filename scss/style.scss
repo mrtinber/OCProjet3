@@ -52,7 +52,7 @@ body{
     }
   }
   
-  $loader-dur: 300ms;
+  $loader-dur: 165ms;
   $loader-delay: 150ms;
   $content-delay: $loader-dur + $loader-delay;
   
@@ -336,6 +336,10 @@ footer{
             display: flex;
             flex-direction: column;
             gap: 7px;
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
         }
         &__fat{
             font-weight: 500;
