@@ -103,10 +103,10 @@ header .header__arrow a {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
 }
 .menu__container__cards__dish {
   background: white;
-  border-radius: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -114,8 +114,6 @@ header .header__arrow a {
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 1;
-  transition: transform 800ms ease;
 }
 .menu__container__cards__dish__txt {
   display: flex;
@@ -135,30 +133,36 @@ header .header__arrow a {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.menu__container__cards__dish__price {
+.menu__container__cards__block {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: absolute;
+  right: -60px;
+  transition: transform 800ms ease;
+}
+.menu__container__cards__block__price {
+  color: black;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-self: self-end;
 }
-.menu__container__cards__choice {
+.menu__container__cards__block__choice {
   background-color: #99e2d0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
   width: 60px;
   height: 100%;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  right: 0;
   z-index: 0;
 }
-.menu__container__cards__choice i {
+.menu__container__cards__block__choice i {
   color: white;
   font-size: 20px;
 }
-.menu__container__cards:hover .menu__container__cards__dish {
+.menu__container__cards:hover .menu__container__cards__block {
   transform: translateX(-60px);
 }
 .menu__button {
