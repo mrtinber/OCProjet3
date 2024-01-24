@@ -101,6 +101,7 @@ header .header__location {
   align-items: center;
   text-align: center;
   padding: 26px;
+  width: 100%;
 }
 .infobar p {
   font-weight: 300;
@@ -166,6 +167,9 @@ header .header__location {
 }
 .operation__container__card__txt i {
   color: #7e7e7e;
+}
+.operation__container__card__txt h3 {
+  font-size: 16px;
 }
 
 /******Restaurants******/
@@ -317,4 +321,53 @@ footer .footer__box__fat li {
 }
 footer .footer__box__fat li i {
   width: 11px;
+}
+
+/******Responsive******/
+@media screen and (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .infobar h1 {
+    font-size: 40px;
+  }
+  .operation {
+    max-width: 1080px;
+    align-items: center;
+  }
+  .operation__container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 36px;
+  }
+  .operation__container__card {
+    width: 33%;
+  }
+  .restaurants {
+    max-width: 1080px;
+  }
+  .restaurants__container {
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restaurants__container a {
+    width: 46%;
+  }
+  footer {
+    flex-direction: row-reverse;
+    gap: 100px;
+  }
+  footer .footer__box {
+    flex-direction: row;
+    gap: 50px;
+  }
+  footer .footer__box ul {
+    flex-direction: row;
+    gap: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */

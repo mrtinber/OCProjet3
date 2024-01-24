@@ -49,9 +49,21 @@ header .header__arrow a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+.menu__title__like {
+  font-size: 22px;
+  padding: 10px 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .menu__title__like input {
   display: none;
+}
+.menu__title__like__label {
+  height: 22px;
 }
 .menu__title__like input:checked + label .fa-regular {
   display: none;
@@ -61,6 +73,7 @@ header .header__arrow a {
 }
 .menu__title__like .fa-regular {
   padding: 1px;
+  position: absolute;
 }
 .menu__title__like .fa-solid {
   background: linear-gradient(#9356DC, #ff79da);
@@ -68,10 +81,11 @@ header .header__arrow a {
   background-clip: text;
   color: transparent;
   cursor: pointer;
-  z-index: 1500;
   opacity: 0;
   transition: opacity 500ms;
   padding: 1px;
+  position: relative;
+  bottom: 3px;
 }
 .menu__container {
   display: flex;
@@ -118,20 +132,18 @@ header .header__arrow a {
 .menu__container__cards__dish__txt {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 25px;
 }
 .menu__container__cards__dish__txt h3 {
   font-size: 18px;
   font-weight: 500;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .menu__container__cards__dish__txt p {
   font-size: 15px;
   font-weight: 300;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .menu__container__cards__block {
   display: flex;
@@ -142,11 +154,13 @@ header .header__arrow a {
   transition: transform 800ms ease;
 }
 .menu__container__cards__block__price {
+  background-color: white;
   color: black;
+  height: 100%;
   padding: 15px;
   display: flex;
   flex-direction: column;
-  align-self: self-end;
+  justify-content: flex-end;
 }
 .menu__container__cards__block__choice {
   background-color: #99e2d0;

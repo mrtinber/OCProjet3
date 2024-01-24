@@ -23,6 +23,7 @@ body{
     position: relative;
 }
 
+
 /******Loading screen******/
 
 @keyframes spin {
@@ -125,7 +126,7 @@ header{
     align-items: center;
     text-align: center;
     padding: 26px;
-    
+    width: 100%;
     p{
         font-weight: 300;
         font-size: 18px;
@@ -190,6 +191,9 @@ header{
                 gap: 20px;
                 i{
                     color: $grey-i;
+                }
+                h3{
+                    font-size: 16px;
                 }
             }
         }
@@ -351,6 +355,58 @@ footer{
                 i{
                     width: 11px;
                 }
+            }
+        }
+    }
+}
+
+/******Responsive******/
+
+@media screen and (min-width: 1024px){
+    main{
+        display: flex;
+        flex-direction: column;
+        max-width: 1080px;
+        margin: 0 auto; 
+    }
+    .infobar{
+        h1{
+            font-size: 40px;
+        }
+    }
+    .operation{
+        max-width: 1080px;
+        align-items: center;
+        &__container{
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 36px;
+            &__card{
+                width: 33%;
+            }
+        }
+    }
+    .restaurants{
+        max-width: 1080px;
+            &__container{
+            flex-direction: row;
+            gap: 50px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            a{
+                width: 46%;
+            }
+        }
+    }
+    footer{
+        flex-direction: row-reverse;
+        gap: 100px;
+        .footer__box{
+            flex-direction: row;
+            gap: 50px;
+            ul{
+                flex-direction: row;
+                gap:16px;
             }
         }
     }

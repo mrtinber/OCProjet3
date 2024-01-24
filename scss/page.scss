@@ -59,11 +59,20 @@ header{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        position: relative; 
         &__like{
+            font-size: 22px;
+            padding: 10px 24px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             input{
                 display: none; 
             }  
-            
+            &__label{
+                height: 22px;
+            }
             input:checked + label{
                 .fa-regular{
                     display: none; 
@@ -74,7 +83,8 @@ header{
             }
     
             .fa-regular{
-                padding: 1px;
+                padding: 1px;      
+                position: absolute;       
             }
     
             .fa-solid{
@@ -83,10 +93,11 @@ header{
                 background-clip: text;
                 color: transparent;
                 cursor: pointer;
-                z-index: 1500;
                 opacity: 0;
                 transition: opacity 500ms;
                 padding: 1px;
+                position: relative;
+                bottom: 3px;
             }
         }
     }  
@@ -132,19 +143,17 @@ header{
                 &__txt{
                     display: flex; 
                     flex-direction: column;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    padding-right: 25px;
                     h3{
                         font-size: 18px;
                         font-weight: 500;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap; 
                     }
                     p{
                         font-size: 15px;
                         font-weight: 300;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap; 
                     }
                 }
             }
@@ -156,11 +165,13 @@ header{
                 right: -60px;
                 transition: transform 800ms ease;
                 &__price{
+                    background-color: white;
                     color:black;
+                    height: 100%;
                     padding: 15px;
                     display: flex; 
                     flex-direction: column;
-                    align-self: self-end; 
+                    justify-content: flex-end; 
                 }
                 &__choice{
                     background-color: $third-color;
