@@ -7,3 +7,8 @@ $grey-txt:#353535;
 $grey-i: #7e7e7e;
 $grey-2: #EAEAEA; 
 $green-txt: #008766;
+
+/**Delays*/
+$loader-dur: 1650ms;
+$loader-delay: 150ms;
+$content-delay: $loader-dur + $loader-delay;
