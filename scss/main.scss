@@ -1,0 +1,33 @@
+@import './abstract/animations';
+@import './abstract/variables'; 
+@import './base/base';
+@import './components/buttons';
+@import './layout/footer';
+@import './layout/header';
+@import './pages/home';
+@import './pages/restaurant';
+
+
+/******Loading screen******/
+  
+.loader{
+    color: white;
+    text-shadow: 5px 5px darken($third-color, 25%);
+    font-size: 3rem;
+    font-family: 'shrikhand'; 
+    width : 100%;
+    position: fixed;
+    top: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    animation: spin 1800ms ease-in-out infinite;
+    /**, shake 800ms cubic-bezier(.4,.1,.6,.9) infinite*/   
+}
+
+
+  
+.content{
+    animation: content-display 0ms $content-delay both;
+    background: white; 
+}
