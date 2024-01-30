@@ -41,6 +41,7 @@ header .header__arrow a {
     opacity: 1;
   }
 }
+/******Menu******/
 .menu {
   background: #f6f6f6;
   padding: 40px 12px;
@@ -283,7 +284,17 @@ header .header__arrow a {
   transform: translateX(-1px) translateY(1px);
 }
 
-/**footer{
-    position: relative;
-    top: -50px;
-}*//*# sourceMappingURL=page.css.map */
+/******Responsive******/
+@media screen and (min-width: 1024px) {
+  .menu {
+    width: 1024px;
+    margin: auto;
+  }
+  .menu__title {
+    justify-content: center;
+  }
+  .menu__container {
+    width: 634px;
+    margin: auto;
+  }
+}/*# sourceMappingURL=page.css.map */
