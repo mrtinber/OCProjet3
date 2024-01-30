@@ -61,6 +61,7 @@ header .header__arrow a {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  padding: 0px 5px;
 }
 .menu__title__like {
   font-size: 22px;
@@ -123,6 +124,11 @@ header .header__arrow a {
   animation: entrance 600ms ease-in-out both;
   animation-delay: 2500ms;
 }
+.menu__container:nth-child(2) .menu__container__cards:nth-child(5) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 2700ms;
+}
 .menu__container:nth-child(3) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
@@ -143,6 +149,11 @@ header .header__arrow a {
   animation: entrance 600ms ease-in-out both;
   animation-delay: 2750ms;
 }
+.menu__container:nth-child(3) .menu__container__cards:nth-child(5) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 2950ms;
+}
 .menu__container:nth-child(4) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
@@ -162,6 +173,11 @@ header .header__arrow a {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
   animation-delay: 3000ms;
+}
+.menu__container:nth-child(4) .menu__container__cards:nth-child(5) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 3200ms;
 }
 .menu__container__title {
   display: flex;

@@ -62,6 +62,7 @@ header{
         justify-content: space-between;
         align-items: center;
         position: relative; 
+        padding: 0px 5px;
         &__like{
             font-size: 22px;
             padding: 10px 24px;
@@ -114,7 +115,7 @@ header{
                 animation: entrance 600ms ease-in-out both;
                 animation-delay: $container-dur;
                 .menu__container__cards{
-                    @for $j from 2 through 4 {
+                    @for $j from 2 through 5 {
                         &:nth-child(#{$j}) {
                             transform-origin: left; 
                             animation: entrance 600ms ease-in-out both;
