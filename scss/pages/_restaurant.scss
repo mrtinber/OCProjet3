@@ -84,17 +84,17 @@ header{
         flex-direction: column;
         gap: 16px;
         @for $i from 2 through 4 {
-            $container-dur: $loader-dur + (250ms * ($i - 1));
+            $container-dur: $loader-dur + (400ms * ($i - 1));
             &:nth-child(#{$i}) {
                 transform-origin: left; 
-                animation: entrance 600ms ease-in-out both;
+                animation: entrance 300ms ease-in both;
                 animation-delay: $container-dur;
                 .menu__container__cards{
                     @for $j from 2 through 5 {
                         &:nth-child(#{$j}) {
                             transform-origin: left; 
                             animation: entrance 600ms ease-in-out both;
-                            animation-delay: $container-dur + (200ms * ($j - 1));
+                            animation-delay: $container-dur + (200ms * ($j - 2));
                         }
                     }
                 } 
@@ -186,7 +186,10 @@ header{
                     }
                 }
             }
-            &:hover{
+            input{
+                display: none; 
+            }  
+            input:checked + label{
                 .menu__container__cards__block{
                     transform: translateX(-60px);
                 }
@@ -194,6 +197,14 @@ header{
                     width: 75%;
                 }
             }
+            /*&:hover{
+                .menu__container__cards__block{
+                    transform: translateX(-60px);
+                }
+                .menu__container__cards__dish{
+                    width: 75%;
+                }
+            }*/
         }
     } 
     &__button{

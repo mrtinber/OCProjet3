@@ -1,3 +1,6 @@
+/**Colors*/
+/**Delays*/
+/**Animations*/
 @keyframes entrance {
   0% {
     transform: scaleX(0);
@@ -29,9 +32,14 @@
     animation-timing-function: cubic-bezier(1, -0.03, 0.8, 1.05);
   }
 }
-/**Colors*/
-/**Delays*/
-/**Animations*/
+@keyframes shake {
+  25% {
+    transform: translateX(5%);
+  }
+  75% {
+    transform: translateX(-5%);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -460,78 +468,78 @@ header .header__logo {
 }
 .menu__container:nth-child(2) {
   transform-origin: left;
-  animation: entrance 600ms ease-in-out both;
-  animation-delay: 1900ms;
+  animation: entrance 300ms ease-in both;
+  animation-delay: 2050ms;
 }
 .menu__container:nth-child(2) .menu__container__cards:nth-child(2) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2100ms;
+  animation-delay: 2050ms;
 }
 .menu__container:nth-child(2) .menu__container__cards:nth-child(3) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2300ms;
+  animation-delay: 2250ms;
 }
 .menu__container:nth-child(2) .menu__container__cards:nth-child(4) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2500ms;
+  animation-delay: 2450ms;
 }
 .menu__container:nth-child(2) .menu__container__cards:nth-child(5) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2700ms;
+  animation-delay: 2650ms;
 }
 .menu__container:nth-child(3) {
   transform-origin: left;
-  animation: entrance 600ms ease-in-out both;
-  animation-delay: 2150ms;
+  animation: entrance 300ms ease-in both;
+  animation-delay: 2450ms;
 }
 .menu__container:nth-child(3) .menu__container__cards:nth-child(2) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2350ms;
+  animation-delay: 2450ms;
 }
 .menu__container:nth-child(3) .menu__container__cards:nth-child(3) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2550ms;
+  animation-delay: 2650ms;
 }
 .menu__container:nth-child(3) .menu__container__cards:nth-child(4) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2750ms;
+  animation-delay: 2850ms;
 }
 .menu__container:nth-child(3) .menu__container__cards:nth-child(5) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2950ms;
+  animation-delay: 3050ms;
 }
 .menu__container:nth-child(4) {
   transform-origin: left;
-  animation: entrance 600ms ease-in-out both;
-  animation-delay: 2400ms;
+  animation: entrance 300ms ease-in both;
+  animation-delay: 2850ms;
 }
 .menu__container:nth-child(4) .menu__container__cards:nth-child(2) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2600ms;
+  animation-delay: 2850ms;
 }
 .menu__container:nth-child(4) .menu__container__cards:nth-child(3) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2800ms;
+  animation-delay: 3050ms;
 }
 .menu__container:nth-child(4) .menu__container__cards:nth-child(4) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 3000ms;
+  animation-delay: 3250ms;
 }
 .menu__container:nth-child(4) .menu__container__cards:nth-child(5) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 3200ms;
+  animation-delay: 3450ms;
 }
 .menu__container__title {
   display: flex;
@@ -557,6 +565,14 @@ header .header__logo {
   display: flex;
   position: relative;
   overflow: hidden;
+  /*&:hover{
+      .menu__container__cards__block{
+          transform: translateX(-60px);
+      }
+      .menu__container__cards__dish{
+          width: 75%;
+      }
+  }*/
 }
 .menu__container__cards__dish {
   background: white;
@@ -620,10 +636,13 @@ header .header__logo {
   color: white;
   font-size: 20px;
 }
-.menu__container__cards:hover .menu__container__cards__block {
+.menu__container__cards input {
+  display: none;
+}
+.menu__container__cards input:checked + label .menu__container__cards__block {
   transform: translateX(-60px);
 }
-.menu__container__cards:hover .menu__container__cards__dish {
+.menu__container__cards input:checked + label .menu__container__cards__dish {
   width: 75%;
 }
 .menu__button {
