@@ -107,10 +107,20 @@ header{
         flex-direction: column;
         gap: 16px;
         @for $i from 2 through 4 {
+            $container-dur: $loader-dur + (250ms * ($i - 1));
             &:nth-child(#{$i}) {
                 transform-origin: left; 
                 animation: entrance 600ms ease-in-out both;
-                animation-delay: $loader-dur + (250ms * ($i - 1));
+                animation-delay: $container-dur;
+                .menu__container__cards{
+                    @for $j from 2 through 4 {
+                        &:nth-child(#{$j}) {
+                            transform-origin: left; 
+                            animation: entrance 600ms ease-in-out both;
+                            animation-delay: $container-dur + (200ms * ($j - 1));
+                        }
+                    }
+                } 
             }
         } 
         &__title{
@@ -137,13 +147,6 @@ header{
             display: flex;
             position: relative;
             overflow: hidden;
-            @for $j from 2 through 4 {
-                &:nth-child(#{$j}) {
-                    transform-origin: left; 
-                    animation: entrance 600ms ease-in-out both;
-                    animation-delay: $loader-dur + (200ms * ($j - 1));
-                }
-            }
             &__dish{
                 background: white;                
                 display: flex;

@@ -107,15 +107,60 @@ header .header__arrow a {
   animation: entrance 600ms ease-in-out both;
   animation-delay: 1900ms;
 }
+.menu__container:nth-child(2) .menu__container__cards:nth-child(2) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 2100ms;
+}
+.menu__container:nth-child(2) .menu__container__cards:nth-child(3) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 2300ms;
+}
+.menu__container:nth-child(2) .menu__container__cards:nth-child(4) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 2500ms;
+}
 .menu__container:nth-child(3) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
   animation-delay: 2150ms;
 }
+.menu__container:nth-child(3) .menu__container__cards:nth-child(2) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 2350ms;
+}
+.menu__container:nth-child(3) .menu__container__cards:nth-child(3) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 2550ms;
+}
+.menu__container:nth-child(3) .menu__container__cards:nth-child(4) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 2750ms;
+}
 .menu__container:nth-child(4) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
   animation-delay: 2400ms;
+}
+.menu__container:nth-child(4) .menu__container__cards:nth-child(2) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 2600ms;
+}
+.menu__container:nth-child(4) .menu__container__cards:nth-child(3) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 2800ms;
+}
+.menu__container:nth-child(4) .menu__container__cards:nth-child(4) {
+  transform-origin: left;
+  animation: entrance 600ms ease-in-out both;
+  animation-delay: 3000ms;
 }
 .menu__container__title {
   display: flex;
@@ -141,21 +186,6 @@ header .header__arrow a {
   display: flex;
   position: relative;
   overflow: hidden;
-}
-.menu__container__cards:nth-child(2) {
-  transform-origin: left;
-  animation: entrance 600ms ease-in-out both;
-  animation-delay: 1850ms;
-}
-.menu__container__cards:nth-child(3) {
-  transform-origin: left;
-  animation: entrance 600ms ease-in-out both;
-  animation-delay: 2050ms;
-}
-.menu__container__cards:nth-child(4) {
-  transform-origin: left;
-  animation: entrance 600ms ease-in-out both;
-  animation-delay: 2250ms;
 }
 .menu__container__cards__dish {
   background: white;
