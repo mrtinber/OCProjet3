@@ -47,7 +47,7 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto";
   background: linear-gradient(#ff79da 5%, #9356DC 30%);
   position: relative;
 }
@@ -63,8 +63,8 @@ footer {
 }
 footer .footer__logo svg {
   fill: white;
-  height: 27px;
-  width: 138px;
+  height: 20px;
+  width: 110px;
 }
 footer .footer__box {
   display: flex;
@@ -130,11 +130,13 @@ header .header__location {
   background: #EAEAEA;
   width: 100%;
   color: #353535;
+  font-size: 16px;
   font-weight: 500;
   box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 header .header__arrow {
   font-size: 24px;
+  color: #353535;
   padding: 6px;
   position: absolute;
   top: 8px;
@@ -151,15 +153,20 @@ header .header__arrow a {
   height: 18rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  padding: 26px;
+  padding: 0px 26px;
   width: 100%;
+}
+.infobar h1 {
+  font-size: 24px;
+  font-weight: 700;
 }
 .infobar p {
   font-weight: 300;
   font-size: 18px;
+  color: #353535;
 }
 .infobar button {
   border: none;
@@ -169,7 +176,8 @@ header .header__arrow a {
   background-image: linear-gradient(#ff79da -14%, #9356DC 123%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: white;
-  font-size: 1rem;
+  font-family: "Roboto";
+  font-size: 16px;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -209,9 +217,12 @@ header .header__arrow a {
   height: 24px;
   border-radius: 25px;
   color: white;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: -12px;
+  top: 25px;
 }
 .operation__container__group__card__txt {
   display: flex;
@@ -224,6 +235,7 @@ header .header__arrow a {
 }
 .operation__container__group__card__txt h3 {
   font-size: 16px;
+  font-weight: 500;
 }
 
 /******Restaurants******/
@@ -294,13 +306,15 @@ header .header__arrow a {
 .restaurants__container__group__card__content__txt {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-.restaurants__container__group__card__content__txt h1 {
+.restaurants__container__group__card__content__txt h3 {
   font-size: 18px;
+  font-weight: 700;
 }
 .restaurants__container__group__card__content__txt p {
   font-size: 17px;
+  font-weight: 300;
 }
 .restaurants__container__group__card__content__like {
   padding: 12px;
@@ -344,6 +358,9 @@ header .header__arrow a {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+  }
+  .infobar {
+    height: 240px;
   }
   .infobar h1 {
     font-size: 40px;
@@ -406,9 +423,9 @@ header .header__logo {
 
 .menu {
   background: #f6f6f6;
-  padding: 40px 12px;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
+  padding: 32px 12px 40px;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -416,8 +433,6 @@ header .header__logo {
   z-index: 2;
 }
 .menu__title {
-  font-family: "Shrikhand", serif;
-  font-size: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -425,9 +440,14 @@ header .header__logo {
   position: relative;
   padding: 0px 5px;
 }
+.menu__title h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  font-weight: 400;
+}
 .menu__title__like {
   font-size: 22px;
-  padding: 10px 24px;
+  padding: 0px 24px;
   position: relative;
   display: flex;
   align-items: center;
@@ -459,7 +479,6 @@ header .header__logo {
   transition: opacity 500ms;
   padding: 1px;
   position: relative;
-  bottom: 3px;
 }
 .menu__container {
   display: flex;
@@ -590,6 +609,7 @@ header .header__logo {
   flex-direction: column;
   padding-right: 25px;
   width: 100%;
+  justify-content: space-between;
 }
 .menu__container__cards__dish__txt h3 {
   font-size: 18px;
@@ -615,7 +635,9 @@ header .header__logo {
 }
 .menu__container__cards__block__price {
   background-color: white;
-  color: black;
+  color: #353535;
+  font-size: 15px;
+  font-weight: 700;
   height: 100%;
   padding: 15px;
   display: flex;
@@ -658,7 +680,8 @@ header .header__logo {
   background-image: linear-gradient(#ff79da -14%, #9356DC 123%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   color: white;
-  font-size: 1rem;
+  font-family: "Roboto";
+  font-size: 16px;
   font-weight: 500;
   display: flex;
   align-items: center;

@@ -18,11 +18,13 @@ header{
         background: $grey-2;
         width: 100%;
         color: $grey-txt;
+        font-size: 16px;
         font-weight: 500;
         box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     }
     .header__arrow{
         font-size: 24px;
+        color: $grey-txt;
         padding: 6px;
         position: absolute;
         top: 8px;
