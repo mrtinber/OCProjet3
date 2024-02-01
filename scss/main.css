@@ -52,6 +52,30 @@ body {
   position: relative;
 }
 
+button {
+  border: none;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  background-image: linear-gradient(#ff79da -14%, #9356DC 123%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+button:hover {
+  border-radius: 25px;
+  background-image: linear-gradient(#ff79da, #ab7ce4);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  transform: translateX(-1px) translateY(1px);
+}
+
 /******Base******/
 footer {
   background-color: #353535;
@@ -61,10 +85,11 @@ footer {
   flex-direction: column;
   gap: 16px;
 }
-footer .footer__logo svg {
-  fill: white;
-  height: 20px;
-  width: 110px;
+footer h2 {
+  color: white;
+  font-size: 18px;
+  font-family: "Shrikhand";
+  font-weight: 400;
 }
 footer .footer__box {
   display: flex;
@@ -98,6 +123,7 @@ footer .footer__box__fat li i {
 @media screen and (min-width: 1024px) {
   footer {
     flex-direction: row-reverse;
+    align-items: center;
     gap: 100px;
   }
   footer .footer__box {
@@ -112,6 +138,7 @@ footer .footer__box__fat li i {
 /******Base******/
 header {
   width: 100%;
+  background-color: white;
 }
 header .header__logo {
   display: flex;
@@ -167,29 +194,6 @@ header .header__arrow a {
   font-weight: 300;
   font-size: 18px;
   color: #353535;
-}
-.infobar button {
-  border: none;
-  width: 218px;
-  height: 50px;
-  border-radius: 25px;
-  background-image: linear-gradient(#ff79da -14%, #9356DC 123%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  color: white;
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 300ms ease-in-out;
-}
-.infobar button:hover {
-  border-radius: 25px;
-  background-image: linear-gradient(#ff79da, #ab7ce4);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  transform: translateX(-1px) translateY(1px);
 }
 
 /******Operation******/
@@ -253,6 +257,9 @@ header .header__arrow a {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+.restaurants__container__group article {
+  position: relative;
 }
 .restaurants__container__group a {
   display: flex;
@@ -321,8 +328,11 @@ header .header__arrow a {
   font-size: 22px;
   z-index: 2;
   border: none;
-  background: white;
-  position: relative;
+  position: absolute;
+  right: 12px;
+  bottom: 35px;
+  text-decoration: none;
+  color: black;
 }
 .restaurants__container__group__card__content__like input {
   display: none;
@@ -397,7 +407,7 @@ header .header__arrow a {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .restaurants__container__group a {
+  .restaurants__container__group article {
     width: 46%;
   }
 }
@@ -410,7 +420,7 @@ header .header__logo {
 }
 
 /******Main******/
-.image img {
+.background {
   width: 100%;
   height: 275px;
   -o-object-fit: cover;
@@ -565,7 +575,7 @@ header .header__logo {
   flex-direction: column;
   gap: 8px;
 }
-.menu__container__title__txt h2 {
+.menu__container__title h2 {
   text-transform: uppercase;
   font-style: normal;
   font-size: 16px;
@@ -584,41 +594,27 @@ header .header__logo {
   display: flex;
   position: relative;
   overflow: hidden;
-  /*&:hover{
-      .menu__container__cards__block{
-          transform: translateX(-60px);
-      }
-      .menu__container__cards__dish{
-          width: 75%;
-      }
-  }*/
 }
 .menu__container__cards__dish {
   background: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   padding: 15px;
-  width: 100%;
+  width: 90%;
   height: 100%;
   position: absolute;
+  cursor: pointer;
   transition: width 600ms ease;
 }
-.menu__container__cards__dish__txt {
-  display: flex;
-  flex-direction: column;
-  padding-right: 25px;
-  width: 100%;
-  justify-content: space-between;
-}
-.menu__container__cards__dish__txt h3 {
+.menu__container__cards__dish__name {
   font-size: 18px;
   font-weight: 500;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu__container__cards__dish__txt p {
+.menu__container__cards__dish__detail {
   font-size: 15px;
   font-weight: 300;
   overflow: hidden;
@@ -631,6 +627,7 @@ header .header__logo {
   height: 100%;
   position: absolute;
   right: -60px;
+  cursor: pointer;
   transition: transform 800ms ease;
 }
 .menu__container__cards__block__price {
@@ -639,7 +636,7 @@ header .header__logo {
   font-size: 15px;
   font-weight: 700;
   height: 100%;
-  padding: 15px;
+  padding: 15px 15px 15px 5px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -661,39 +658,19 @@ header .header__logo {
 .menu__container__cards input {
   display: none;
 }
+.menu__container__cards input span {
+  display: block;
+}
 .menu__container__cards input:checked + label .menu__container__cards__block {
   transform: translateX(-60px);
 }
 .menu__container__cards input:checked + label .menu__container__cards__dish {
-  width: 75%;
+  width: 70%;
 }
 .menu__button {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-.menu__button button {
-  border: none;
-  width: 218px;
-  height: 50px;
-  border-radius: 25px;
-  background-image: linear-gradient(#ff79da -14%, #9356DC 123%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  color: white;
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 300ms ease-in-out;
-}
-.menu__button button:hover {
-  border-radius: 25px;
-  background-image: linear-gradient(#ff79da, #ab7ce4);
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-  transform: translateX(-1px) translateY(1px);
 }
 
 /******Responsive******/
@@ -708,6 +685,12 @@ header .header__logo {
   .menu__container {
     width: 634px;
     margin: auto;
+  }
+  .menu__container__cards__dish {
+    width: 100%;
+  }
+  .menu input:checked + label .menu__container__cards__dish {
+    width: 90%;
   }
 }
 /******Loading screen******/
@@ -729,4 +712,5 @@ header .header__logo {
 .content {
   animation: content-display 0ms 1800ms both;
   background: white;
+  min-height: 100vh;
 }/*# sourceMappingURL=main.css.map */

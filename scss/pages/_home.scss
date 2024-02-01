@@ -1,6 +1,6 @@
 /******Infobar******/
 
-.infobar{
+.infobar {
     background: $background;
     height: 18rem;
     display: flex;
@@ -10,128 +10,123 @@
     text-align: center;
     padding: 0px 26px;
     width: 100%;
-    h1{
+
+    h1 {
         font-size: 24px;
         font-weight: 700;
     }
-    p{
+
+    p {
         font-weight: 300;
         font-size: 18px;
         color: $grey-txt;
-    }
-
-    button{
-        border: none; 
-        width: 218px;
-        height: 50px; 
-        border-radius: 25px;
-        background-image: linear-gradient($second-color -14%, $main-color 123%);
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-        color: white;
-        font-family: 'Roboto';
-        font-size: 16px;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 300ms ease-in-out;
-        &:hover{
-            border-radius: 25px;
-            background-image: linear-gradient($second-color, lighten($main-color, 9));
-            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
-            transform: translateX(-1px) translateY(1px);
-        }
     }
 }
 
 /******Operation******/
 
-.operation{
-    background: white; 
+.operation {
+    background: white;
     padding: 48px 20px;
-    &__container{
-            &__group{
+
+    &__container {
+        &__group {
             display: flex;
             flex-direction: column;
             gap: 25px;
             padding: 20px 0;
-                &__card{
-                    background-color: $background;
-                    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-                    border-radius: 20px;
-                    padding: 28px 36px;
+
+            &__card {
+                background-color: $background;
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+                border-radius: 20px;
+                padding: 28px 36px;
+                display: flex;
+                position: relative;
+
+                &__number {
+                    background: $main-color;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 25px;
+                    color: white;
                     display: flex;
-                    position: relative;
-                    &__number{
-                        background: $main-color;
-                        width: 24px;
-                        height: 24px;
-                        border-radius: 25px;
-                        color: white;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        position: absolute;
-                        left: -12px;
-                        top: 25px;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    left: -12px;
+                    top: 25px;
+                }
+
+                &__txt {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 20px;
+
+                    i {
+                        color: $grey-i;
                     }
-                    &__txt{
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        gap: 20px;
-                        i{
-                            color: $grey-i;
-                        }
-                        h3{
-                            font-size: 16px;
-                            font-weight: 500;
-                        }
+
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 500;
                     }
                 }
             }
         }
+    }
 }
 
 /******Restaurants******/
 
-.restaurants{
+.restaurants {
     width: 100%;
     padding: 48px 20px;
     background-color: $background;
-    &__container{
+
+    &__container {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        &__group{
+
+        &__group {
             display: flex;
             flex-direction: column;
             gap: 18px;
-            a{
-                display: flex;    
-                text-decoration: none;   
-                z-index: 1;   
+
+            article {
+                position: relative;
             }
-            &__card{
+
+            a {
+                display: flex;
+                text-decoration: none;
+                z-index: 1;
+            }
+
+            &__card {
                 display: flex;
                 flex-direction: column;
                 background-color: white;
                 border-radius: 15px;
                 height: 250px;
                 width: 100%;
-                &__img{
+
+                &__img {
                     position: relative;
                     padding: 0;
                     height: 175px;
-                    img{
+
+                    img {
                         object-fit: cover;
                         border-top-right-radius: 15px;
                         border-top-left-radius: 15px;
                         height: 100%;
                         width: 100%;
                     }
-                    &__new{
+
+                    &__new {
                         background: $third-color;
                         color: $green-txt;
                         width: 80px;
@@ -147,54 +142,64 @@
                         bottom: 135px;
                     }
                 }
-                &__content{
+
+                &__content {
                     height: 75px;
                     padding: 13px;
                     color: black;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
-                    &__txt{
+
+                    &__txt {
                         display: flex;
                         flex-direction: column;
                         justify-content: space-evenly;
-                        h3{
+
+                        h3 {
                             font-size: 18px;
                             font-weight: 700;
                         }
-                        p{
+
+                        p {
                             font-size: 17px;
                             font-weight: 300;
                         }
                     }
-                    &__like{
+
+                    &__like {
                         padding: 12px;
                         font-size: 22px;
                         z-index: 2;
                         border: none;
-                        background: white;
-                        position: relative;
-                        input{
-                            display: none; 
-                        }  
-                        
-                        input:checked + label{
-                            .fa-regular{
-                                display: none; 
+                        position: absolute;
+                        right: 12px;
+                        bottom: 35px;
+                        text-decoration: none;
+                        color: black;
+
+                        input {
+                            display: none;
+                        }
+
+                        input:checked+label {
+                            .fa-regular {
+                                display: none;
                             }
-                            .fa-solid{
+
+                            .fa-solid {
                                 opacity: 1;
                             }
                         }
-    
-                        .fa-regular{
+
+                        .fa-regular {
                             position: absolute;
                             left: -50%;
                             padding: 1px;
                         }
-    
-                        .fa-solid{
-                            background: linear-gradient($main-color, $second-color); 
+
+                        .fa-solid {
+                            background: linear-gradient($main-color, $second-color);
                             -webkit-background-clip: text;
                             background-clip: text;
                             color: transparent;
@@ -210,53 +215,63 @@
                 }
             }
         }
-    }  
+    }
 }
 
 /******Responsive******/
 
-@media screen and (min-width: 1024px){
-    main{
+@media screen and (min-width: 1024px) {
+    main {
         display: flex;
         flex-direction: column;
-        margin: 0 auto; 
+        margin: 0 auto;
     }
-    .infobar{
+
+    .infobar {
         height: 240px;
-        h1{
+
+        h1 {
             font-size: 40px;
         }
     }
-    .operation{
+
+    .operation {
         width: 100%;
         display: flex;
         justify-content: center;
-        &__container{
+
+        &__container {
             width: 1080px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            &__group{
+
+            &__group {
                 flex-direction: row;
                 justify-content: space-between;
                 gap: 36px;
-                &__card{
+
+                &__card {
                     width: 33%;
                 }
             }
         }
     }
-    .restaurants{
+
+    .restaurants {
         display: flex;
         justify-content: center;
-        &__container{
+
+        &__container {
             max-width: 1080px;
-            &__group{
+
+            &__group {
                 flex-direction: row;
                 gap: 50px;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                a{
+
+                article {
                     width: 46%;
                 }
             }

@@ -1,41 +1,47 @@
 /******Base******/
 
-footer{
+footer {
     background-color: $grey-txt;
     color: white;
     padding: 22px 25px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    .footer__logo{
-        svg{
-            fill: white;
-            height: 20px;
-            width: 110px;
-        }
+
+    h2 {
+        color: white;
+        font-size: 18px;
+        font-family: 'Shrikhand';
+        font-weight: 400;
     }
-    .footer__box{
-        display:flex;
+
+    .footer__box {
+        display: flex;
         flex-direction: column;
         gap: 7px;
-        ul{
+
+        ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             gap: 7px;
-            a{
+
+            a {
                 text-decoration: none;
                 color: inherit;
             }
         }
-        &__fat{
+
+        &__fat {
             font-weight: 500;
-            li{
+
+            li {
                 display: flex;
                 flex-direction: row;
                 gap: 20px;
                 align-items: center;
-                i{
+
+                i {
                     width: 11px;
                 }
             }
@@ -45,16 +51,19 @@ footer{
 
 /******Responsive******/
 
-@media screen and (min-width: 1024px){
-    footer{
+@media screen and (min-width: 1024px) {
+    footer {
         flex-direction: row-reverse;
+        align-items: center;
         gap: 100px;
-        .footer__box{
+
+        .footer__box {
             flex-direction: row;
             gap: 50px;
-            ul{
+
+            ul {
                 flex-direction: row;
-                gap:16px;
+                gap: 16px;
             }
         }
     }

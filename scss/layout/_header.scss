@@ -1,16 +1,20 @@
 /******Base******/
-header{
+header {
     width: 100%;
+    background-color: white;
+
     .header__logo {
         display: flex;
         padding: 20px 0 13px 0;
         justify-content: center;
-        & img{
-        width: 162px;
+
+        & img {
+            width: 162px;
         }
     }
-    .header__location{
-        display: flex; 
+
+    .header__location {
+        display: flex;
         align-items: center;
         gap: 17px;
         justify-content: center;
@@ -22,14 +26,16 @@ header{
         font-weight: 500;
         box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     }
-    .header__arrow{
+
+    .header__arrow {
         font-size: 24px;
         color: $grey-txt;
         padding: 6px;
         position: absolute;
         top: 8px;
         left: 17px;
-        a{
+
+        a {
             text-decoration: none;
             color: inherit;
         }

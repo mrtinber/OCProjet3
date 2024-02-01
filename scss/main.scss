@@ -1,4 +1,4 @@
-@import './abstract/variables'; 
+@import './abstract/variables';
 @import './abstract/animations';
 @import './base/base';
 @import './components/buttons';
@@ -9,25 +9,26 @@
 
 
 /******Loading screen******/
-  
-.loader{
+
+.loader {
     color: white;
     text-shadow: 5px 5px darken($third-color, 25%);
     font-size: 3rem;
-    font-family: 'shrikhand'; 
-    width : 100%;
+    font-family: 'shrikhand';
+    width: 100%;
     position: fixed;
     top: 50%;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     animation: spin 1800ms ease-in-out infinite;
-    /**, shake 800ms cubic-bezier(.4,.1,.6,.9) infinite*/ 
+    /**, shake 800ms cubic-bezier(.4,.1,.6,.9) infinite*/
 }
 
 
-  
-.content{
+
+.content {
     animation: content-display 0ms $content-delay both;
-    background: white; 
+    background: white;
+    min-height: 100vh;
 }
