@@ -48,7 +48,7 @@
 
 body {
   font-family: "Roboto";
-  background: linear-gradient(#ff79da 5%, #9356DC 30%);
+  background: white;
   position: relative;
 }
 
@@ -172,6 +172,10 @@ header .header__arrow {
 header .header__arrow a {
   text-decoration: none;
   color: inherit;
+}
+
+body {
+  background: linear-gradient(#ff79da 5%, #9356DC 30%);
 }
 
 /******Infobar******/
@@ -420,6 +424,10 @@ header .header__logo {
 }
 
 /******Main******/
+main {
+  background: white;
+}
+
 .background {
   width: 100%;
   height: 275px;
@@ -498,77 +506,77 @@ header .header__logo {
 .menu__container:nth-child(2) {
   transform-origin: left;
   animation: entrance 300ms ease-in both;
-  animation-delay: 2050ms;
+  animation-delay: 400ms;
 }
 .menu__container:nth-child(2) .menu__container__cards:nth-child(2) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2050ms;
+  animation-delay: 400ms;
 }
 .menu__container:nth-child(2) .menu__container__cards:nth-child(3) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2250ms;
+  animation-delay: 600ms;
 }
 .menu__container:nth-child(2) .menu__container__cards:nth-child(4) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2450ms;
+  animation-delay: 800ms;
 }
 .menu__container:nth-child(2) .menu__container__cards:nth-child(5) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2650ms;
+  animation-delay: 1000ms;
 }
 .menu__container:nth-child(3) {
   transform-origin: left;
   animation: entrance 300ms ease-in both;
-  animation-delay: 2450ms;
+  animation-delay: 800ms;
 }
 .menu__container:nth-child(3) .menu__container__cards:nth-child(2) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2450ms;
+  animation-delay: 800ms;
 }
 .menu__container:nth-child(3) .menu__container__cards:nth-child(3) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2650ms;
+  animation-delay: 1000ms;
 }
 .menu__container:nth-child(3) .menu__container__cards:nth-child(4) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2850ms;
+  animation-delay: 1200ms;
 }
 .menu__container:nth-child(3) .menu__container__cards:nth-child(5) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 3050ms;
+  animation-delay: 1400ms;
 }
 .menu__container:nth-child(4) {
   transform-origin: left;
   animation: entrance 300ms ease-in both;
-  animation-delay: 2850ms;
+  animation-delay: 1200ms;
 }
 .menu__container:nth-child(4) .menu__container__cards:nth-child(2) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 2850ms;
+  animation-delay: 1200ms;
 }
 .menu__container:nth-child(4) .menu__container__cards:nth-child(3) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 3050ms;
+  animation-delay: 1400ms;
 }
 .menu__container:nth-child(4) .menu__container__cards:nth-child(4) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 3250ms;
+  animation-delay: 1600ms;
 }
 .menu__container:nth-child(4) .menu__container__cards:nth-child(5) {
   transform-origin: left;
   animation: entrance 600ms ease-in-out both;
-  animation-delay: 3450ms;
+  animation-delay: 1800ms;
 }
 .menu__container__title {
   display: flex;
