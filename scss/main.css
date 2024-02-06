@@ -649,6 +649,8 @@ header .header__logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   z-index: 0;
 }
 .menu__container__cards__block__choice i {
